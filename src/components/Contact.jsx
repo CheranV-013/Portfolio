@@ -51,19 +51,19 @@ const Contact = () => {
               </p>
               <div className="mt-4 flex flex-col gap-3 text-sm font-medium text-ink-700">
                 <a
-                  href="https://github.com/YOUR_GITHUB_USERNAME"
+                  href="https://github.com/CheranV-013"
                   className="inline-flex items-center gap-3 rounded-lg bg-ink-50 px-4 py-3 hover:text-ink-900"
                 >
                   <FiGithub /> GitHub
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/"
+                  href="https://www.linkedin.com/in/cheran-v-b6a413347/"
                   className="inline-flex items-center gap-3 rounded-lg bg-ink-50 px-4 py-3 hover:text-ink-900"
                 >
                   <FiLinkedin /> LinkedIn
                 </a>
                 <a
-                  href="mailto:hello@example.com"
+                  href="theche200699.com"
                   className="inline-flex items-center gap-3 rounded-lg bg-ink-50 px-4 py-3 hover:text-ink-900"
                 >
                   <FiMail /> Email

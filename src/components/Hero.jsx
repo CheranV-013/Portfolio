@@ -32,7 +32,7 @@ const Hero = () => {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
             <a
-              href="/resume.pdf"
+              href="'/Users/cheranv/Downloads/Cheran V Resume.pdf'"
               download
               className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-accent-700"
             >

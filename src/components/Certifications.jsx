@@ -1,38 +1,41 @@
+import { useState } from 'react'
+import CertificateCard from './CertificateCard.jsx'
+import CertificateModal from './CertificateModal.jsx'
+import pythonCert from '../assets/certificates/python.jpg'
+import mlCert from '../assets/certificates/ml.jpg'
+
 const certifications = [
   {
-    title: 'Python for Data Science',
-    issuer: 'NPTEL',
-    year: '2024'
+    title: 'Honours Diploma in Full Stack Development',
+    organization: 'Computer Software College',
+    year: '2025',
+    image: pythonCert
   },
   {
-    title: 'Machine Learning Foundations',
-    issuer: 'Coursera',
-    year: '2023'
-  },
-  {
-    title: 'React Front-End Development',
-    issuer: 'Udemy',
-    year: '2024'
+    title: 'B.A. in Hindi Language',
+    organization: 'Dhaksina Bharat Hindi Prachar Sabha',
+    year: '2021',
+    image: mlCert
   }
 ]
 
 const Certifications = () => {
+  const [activeCert, setActiveCert] = useState(null)
+
   return (
     <section id="certifications" className="section">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <h2 className="section-title">Certifications</h2>
-        <p className="section-subtitle">Continuous learning through industry-recognized courses.</p>
+        <p className="section-subtitle">Recognitions that validate my AI/ML and development skills.</p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certifications.map((cert) => (
-            <div key={cert.title} className="card p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-600">{cert.year}</p>
-              <h3 className="mt-3 text-lg font-semibold text-ink-900">{cert.title}</h3>
-              <p className="mt-2 text-sm text-ink-500">{cert.issuer}</p>
-            </div>
+            <CertificateCard key={cert.title} cert={cert} onView={setActiveCert} />
           ))}
         </div>
       </div>
+
+      <CertificateModal cert={activeCert} onClose={() => setActiveCert(null)} />
     </section>
   )
 }
