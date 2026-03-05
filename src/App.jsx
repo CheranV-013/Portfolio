@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
+import Skills from './components/Skills.jsx'
 import Education from './components/Education.jsx'
 import Certifications from './components/Certifications.jsx'
 import Achievements from './components/Achievements.jsx'
@@ -15,6 +16,7 @@ const App = () => {
       <main>
         <Hero />
         <About />
+        <Skills />
         <Education />
         <Certifications />
         <Achievements />
