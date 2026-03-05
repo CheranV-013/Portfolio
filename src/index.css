@@ -11,7 +11,7 @@
 }
 
 body {
-  @apply font-body bg-sand-50 text-ink-900;
+  @apply font-body;
 }
 
 .section {
@@ -44,4 +44,76 @@ body {
   background: radial-gradient(circle at top left, rgba(46, 119, 255, 0.12), transparent 40%),
     radial-gradient(circle at 60% 20%, rgba(255, 204, 128, 0.25), transparent 45%),
     linear-gradient(180deg, #fdfbf7 0%, #f6f7fb 100%);
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme .card {
+  background-color: #111827;
+  border-color: #1f2937;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6);
+}
+
+.dark-theme .badge {
+  background-color: #1f2937;
+  color: #e2e8f0;
+}
+
+.dark-theme .gradient-bg {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 45%),
+    radial-gradient(circle at 60% 20%, rgba(234, 179, 8, 0.15), transparent 45%),
+    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+}
+
+.dark-theme .bg-sand-100\\/60 {
+  background-color: #111827 !important;
+}
+
+.dark-theme .bg-sand-50 {
+  background-color: #0f172a !important;
+}
+
+.dark-theme .bg-sand-50\\/90 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+}
+
+.dark-theme .bg-white {
+  background-color: #111827 !important;
+}
+
+.dark-theme .border-ink-100 {
+  border-color: #1f2937 !important;
+}
+
+.dark-theme .border-ink-200 {
+  border-color: #334155 !important;
+}
+
+.dark-theme .text-ink-900 {
+  color: #f8fafc !important;
+}
+
+.dark-theme .text-ink-700,
+.dark-theme .text-ink-600,
+.dark-theme .text-ink-500 {
+  color: #94a3b8 !important;
+}
+
+.dark-theme .text-accent-600 {
+  color: #93c5fd !important;
+}
+
+.dark-theme .shadow-soft,
+.dark-theme .shadow-card {
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6);
 }

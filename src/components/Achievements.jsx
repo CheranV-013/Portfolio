@@ -1,34 +1,48 @@
+import { useState } from 'react'
+import AchievementCard from './AchievementCard.jsx'
+import AchievementModal from './AchievementModal.jsx'
+import techfusion1 from '../assets/achievements/techfusion1.jpg'
+import techfusion2 from '../assets/achievements/techfusion2.jpg'
+import techfusion3 from '../assets/achievements/techfusion3.jpg'
+import techfusion4 from '../assets/achievements/techfusion4.jpg'
+
 const achievements = [
   {
-    title: 'Smart India Hackathon Finalist',
-    detail: 'Built an AI-powered campus navigation assistant for inclusive accessibility.'
-  },
-  {
-    title: 'Top 5 - National ML Challenge',
-    detail: 'Developed a predictive model for energy consumption optimization.'
-  },
-  {
-    title: 'Campus Tech Fest Winner',
-    detail: 'Led a team to deliver a real-time quiz platform with live analytics.'
+    title: 'TECH FUSION QUEST – Quiz Platform',
+    shortDescription: 'Developed a real-time quiz platform used in an intercollegiate event.',
+    event: 'UDHAYAM Intercollegiate Event 2025',
+    coverImage: techfusion1,
+    description:
+      'Built and deployed a real-time quiz hosting platform with live participant joining, quiz code access, and a continuously updating leaderboard. Collaborated with event coordinators to ensure a seamless on-stage experience and reliable performance throughout the competition.',
+    technologies: ['React', 'Node.js', 'Socket.io'],
+    role: 'Led front-end development, integrated Socket.io live updates, and coordinated deployment on event day.',
+    images: [techfusion1, techfusion2, techfusion3, techfusion4]
   }
 ]
 
 const Achievements = () => {
+  const [activeAchievement, setActiveAchievement] = useState(null)
+
   return (
     <section id="achievements" className="section bg-sand-100/60">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <h2 className="section-title">Achievements</h2>
-        <p className="section-subtitle">Highlights from competitions, hackathons, and events.</p>
+        <div className="animate-fadeUp">
+          <h2 className="section-title">Achievements</h2>
+          <p className="section-subtitle">Showcasing milestones, competitions, and real-world deployments.</p>
+        </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {achievements.map((item) => (
-            <div key={item.title} className="card p-6">
-              <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
-              <p className="mt-3 text-sm text-ink-500">{item.detail}</p>
-            </div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {achievements.map((achievement) => (
+            <AchievementCard
+              key={achievement.title}
+              achievement={achievement}
+              onView={setActiveAchievement}
+            />
           ))}
         </div>
       </div>
+
+      <AchievementModal achievement={activeAchievement} onClose={() => setActiveAchievement(null)} />
     </section>
   )
 }

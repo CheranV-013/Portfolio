@@ -11,7 +11,7 @@ const links = [
   { label: 'Contact', href: '#contact' }
 ]
 
-const Navbar = () => {
+const Navbar = ({ theme, onToggleTheme }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -27,6 +27,12 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <button
+            onClick={onToggleTheme}
+            className="rounded-full border border-ink-200 bg-white px-4 py-2 text-xs font-semibold text-ink-700 shadow-sm transition hover:border-ink-300 hover:text-ink-900"
+          >
+            {theme === 'dark' ? '☀ Light' : '🌙 Dark'}
+          </button>
         </div>
 
         <button
@@ -52,6 +58,15 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <button
+                onClick={() => {
+                  onToggleTheme()
+                  setOpen(false)
+                }}
+                className="rounded-lg border border-ink-200 bg-white px-3 py-2 text-left text-xs font-semibold text-ink-700 shadow-sm transition hover:border-ink-300 hover:text-ink-900"
+              >
+                {theme === 'dark' ? '☀ Light' : '🌙 Dark'}
+              </button>
             </div>
           </div>
         </div>

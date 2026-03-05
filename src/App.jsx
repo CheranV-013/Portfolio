@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
@@ -10,9 +11,22 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
 const App = () => {
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem('theme')
+    return storedTheme || 'light'
+  })
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+  }
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
   return (
-    <div className="min-h-screen bg-sand-50 text-ink-900">
-      <Navbar />
+    <div className={`min-h-screen ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />
