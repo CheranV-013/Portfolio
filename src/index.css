@@ -75,17 +75,8 @@ body {
     linear-gradient(180deg, #0f172a 0%, #111827 100%);
 }
 
-/* Fixed selectors for Vercel build */
-.dark-theme [class*="bg-sand-100/60"] {
-  background-color: #111827 !important;
-}
-
 .dark-theme .bg-sand-50 {
   background-color: #0f172a !important;
-}
-
-.dark-theme [class*="bg-sand-50/90"] {
-  background-color: rgba(15, 23, 42, 0.9) !important;
 }
 
 .dark-theme .bg-white {
