@@ -5,20 +5,34 @@ import techfusion1 from '../assets/achievements/techfusion1.jpg'
 import techfusion2 from '../assets/achievements/techfusion2.jpg'
 import techfusion3 from '../assets/achievements/techfusion3.jpg'
 import techfusion4 from '../assets/achievements/techfusion4.jpg'
+import hackathon1 from '../assets/achievements/hackathon1.jpg'    
 
 const achievements = [
   {
     title: 'TECH FUSION QUEST – Quiz Platform',
     shortDescription: 'Developed a real-time quiz platform used in an intercollegiate event.',
-    event: 'UDHAYAM Intercollegiate Event 2025',
+    event: 'UDHAYAM Intercollegiate Event 2026',
     coverImage: techfusion1,
     description:
       'Built and deployed a real-time quiz hosting platform with live participant joining, quiz code access, and a continuously updating leaderboard. Collaborated with event coordinators to ensure a seamless on-stage experience and reliable performance throughout the competition.',
     technologies: ['React', 'Node.js', 'Socket.io'],
     role: 'Led front-end development, integrated Socket.io live updates, and coordinated deployment on event day.',
     images: [techfusion1, techfusion2, techfusion3, techfusion4]
+  },
+  {
+    title: 'Runner-Up - Coding Hackathon 2025',
+    shortDescription: '2nd place in a coding hackathon, conducted by United Institute of Technology.',
+    event: 'Coding Hackathon 2025',
+    coverImage: hackathon1,
+    description:
+      'Collaborated with a team to build and solve problems related to Cybersecurity.',
+    technologies: ['C++'],
+    role: 'Collaborated with team members to identify and mitigate security vulnerabilities.',
+    images: [hackathon1]
   }
 ]
+
+
 
 const Achievements = () => {
   const [activeAchievement, setActiveAchievement] = useState(null)
