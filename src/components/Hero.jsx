@@ -23,7 +23,7 @@ const Hero = () => {
             Cheran V
           </h1>
           <p className="mt-4 text-lg font-medium text-ink-600">
-            AIML Student | Developer
+            AIML Student
           </p>
           <p className="mt-4 text-base text-ink-500">
             Building intelligent, user-focused applications by blending machine learning, clean code, and modern

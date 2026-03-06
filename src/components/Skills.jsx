@@ -27,7 +27,7 @@ const categoryIcons = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section bg-sand-100">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="animate-fadeUp">
           <h2 className="section-title">Skills & Technologies</h2>
