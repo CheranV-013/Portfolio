@@ -15,7 +15,6 @@ const Education = () => {
               </h3>
               <p className="mt-2 text-sm font-medium text-ink-600">Artificial Intelligence and Machine Learning</p>
               <p className="mt-3 text-sm text-ink-500">2nd Year Undergraduate</p>
-              <p className="mt-3 text-sm text-ink-500">CGPA : 8.08</p>
             </div>
           </div>
         </div>
