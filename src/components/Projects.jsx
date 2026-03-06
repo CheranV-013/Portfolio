@@ -6,6 +6,7 @@ import quiz1 from '../assets/projects/quiz1.jpg'
 import quiz2 from '../assets/projects/quiz2.jpg'
 import quiz3 from '../assets/projects/quiz3.jpg'  
 
+
 const projects = [
   {
     title: 'Smart Accident and Intrusion Detection System',
@@ -15,7 +16,7 @@ const projects = [
       'A smart accident and tampering detection system that uses real-time data analysis to identify and respond to incidents. Features include automated alerts, incident tracking, and data visualization dashboards.',
     technologies: ['ArdinoIDE','React',],
     github: 'https://github.com/CheranV-013/Smart-Accident-and-Intruson-Detection-System',
-    demo: 'https://quiz-platform.vercel.app',
+    demo: 'not available',
     images: [esp1]
   },
   {
@@ -25,8 +26,8 @@ const projects = [
     description:
       'A real-time quiz hosting platform that allows participants to join using a quiz code and compete with live leaderboard updates. Includes host controls, question scheduling, and admin insights.',
     technologies: ['React', 'Node.js', 'Socket.io'],
-    github: 'https://github.com/CheranV-013/Real-Time-Quiz-Platform',
-    demo: 'https://real-time-quiz-platform.vercel.app',
+    github: 'https://github.com/CheranV-013/Quiz',
+    demo: 'https://quizzz-inky.vercel.app/',
     images: [quiz1, quiz2, quiz3]
   }
 ]
