@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
-import { FiX } from 'react-icons/fi'
+import { FiExternalLink, FiGithub, FiX } from 'react-icons/fi'
 
-const AchievementModal = ({ achievement, onClose }) => {
+const ProjectModal = ({ project, onClose }) => {
   useEffect(() => {
-    if (!achievement) return undefined
+    if (!project) return undefined
     const original = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.overflow = original || 'auto'
     }
-  }, [achievement])
+  }, [project])
 
-  if (!achievement) return null
+  if (!project) return null
 
   return (
     <div
@@ -32,39 +32,42 @@ const AchievementModal = ({ achievement, onClose }) => {
         </button>
         <div className="max-h-[80vh] overflow-auto">
           <div className="p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-600">
-              {achievement.event}
-            </p>
-            <h3 className="mt-3 text-2xl font-display font-semibold text-ink-900">
-              {achievement.title}
-            </h3>
-            <p className="mt-4 text-sm text-ink-500">{achievement.description}</p>
+            <h3 className="text-2xl font-display font-semibold text-ink-900">{project.title}</h3>
+            <p className="mt-4 text-sm text-ink-500">{project.description}</p>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
-              <div>
-                <h4 className="text-sm font-semibold text-ink-900">Technologies Used</h4>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {achievement.technologies.map((tech) => (
-                    <span key={tech} className="badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold text-ink-900">Role & Contribution</h4>
-                <p className="mt-3 text-sm text-ink-500">{achievement.role}</p>
-              </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <span key={tech} className="badge">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={project.github}
+                className="inline-flex items-center gap-2 rounded-full border border-ink-200 bg-white px-4 py-2 text-sm font-semibold text-ink-700 transition hover:border-ink-300 hover:text-ink-900"
+              >
+                <FiGithub />
+                GitHub
+              </a>
+              <a
+                href={project.demo}
+                className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-700"
+              >
+                <FiExternalLink />
+                Live Demo
+              </a>
             </div>
 
             <div className="mt-8">
               <h4 className="text-sm font-semibold text-ink-900">Gallery</h4>
               <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {achievement.images.map((img) => (
+                {project.images.map((img) => (
                   <div key={img} className="overflow-hidden rounded-xl">
                     <img
                       src={img}
-                      alt={achievement.title}
+                      alt={project.title}
                       className="h-40 w-full object-cover transition duration-300 hover:scale-105"
                     />
                   </div>
@@ -78,4 +81,4 @@ const AchievementModal = ({ achievement, onClose }) => {
   )
 }
 
-export default AchievementModal
+export default ProjectModal

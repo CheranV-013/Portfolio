@@ -1,68 +1,57 @@
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { useState } from 'react'
+import ProjectCard from './ProjectCard.jsx'
+import ProjectModal from './ProjectModal.jsx'
+import quiz1 from '../assets/projects/quiz1.jpg'
+import quiz2 from '../assets/projects/quiz2.jpg'
+import quiz3 from '../assets/projects/quiz3.jpg'
+import study1 from '../assets/projects/study1.jpg'
+import study2 from '../assets/projects/study2.jpg'
+import study3 from '../assets/projects/study3.jpg'
 
 const projects = [
   {
-    title: 'Real-time Quiz Platform',
+    title: 'Real-Time Quiz Platform',
+    shortDescription: 'Interactive quiz platform with live leaderboard.',
+    coverImage: quiz1,
     description:
-      'Interactive quiz platform featuring live leaderboard updates, quiz code joining, and admin analytics dashboard.',
-    tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    github: 'https://github.com/YOUR_GITHUB_USERNAME/quiz-platform',
-    demo: 'https://demo.example.com'
+      'A real-time quiz hosting platform that allows participants to join using a quiz code and compete with live leaderboard updates. Includes host controls, question scheduling, and admin insights.',
+    technologies: ['React', 'Node.js', 'Socket.io'],
+    github: 'https://github.com/username/quiz-platform',
+    demo: 'https://quiz-platform.vercel.app',
+    images: [quiz1, quiz2, quiz3]
   },
   {
     title: 'AI Study Planner',
-    description: 'Smart scheduling assistant that recommends study sessions based on productivity analytics.',
-    tech: ['Python', 'FastAPI', 'TensorFlow'],
-    github: 'https://github.com/YOUR_GITHUB_USERNAME/ai-study-planner',
-    demo: 'https://demo.example.com'
-  },
-  {
-    title: 'Campus Event Insights',
-    description: 'Data visualization dashboard for student event participation and sentiment trends.',
-    tech: ['React', 'D3.js', 'Firebase'],
-    github: 'https://github.com/YOUR_GITHUB_USERNAME/event-insights',
-    demo: 'https://demo.example.com'
+    shortDescription: 'Smart scheduling assistant for personalized study plans.',
+    coverImage: study1,
+    description:
+      'An AI-assisted study planner that recommends optimal study slots based on productivity patterns and course priorities. Includes analytics dashboards and schedule exports.',
+    technologies: ['React', 'FastAPI', 'TensorFlow'],
+    github: 'https://github.com/username/ai-study-planner',
+    demo: 'https://ai-study-planner.vercel.app',
+    images: [study1, study2, study3]
   }
 ]
 
 const Projects = () => {
+  const [activeProject, setActiveProject] = useState(null)
+
   return (
     <section id="projects" className="section">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">A selection of recent work showcasing AI/ML and full-stack skills.</p>
+        <div className="animate-fadeUp">
+          <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">A selection of recent work showcasing AI/ML and full-stack skills.</p>
+        </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <div key={project.title} className="card flex h-full flex-col p-6">
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-ink-900">{project.title}</h3>
-                <p className="mt-3 text-sm text-ink-500">{project.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full bg-ink-50 px-3 py-1 text-xs font-medium text-ink-600"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-6 flex items-center gap-4 text-sm font-semibold text-ink-600">
-                <a href={project.github} className="inline-flex items-center gap-2 hover:text-ink-900">
-                  <FiGithub />
-                  GitHub
-                </a>
-                <a href={project.demo} className="inline-flex items-center gap-2 hover:text-ink-900">
-                  <FiExternalLink />
-                  Live Demo
-                </a>
-              </div>
-            </div>
+            <ProjectCard key={project.title} project={project} onView={setActiveProject} />
           ))}
         </div>
       </div>
+
+      <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
     </section>
   )
 }
