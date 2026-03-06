@@ -3,6 +3,8 @@ import CertificateCard from './CertificateCard.jsx'
 import CertificateModal from './CertificateModal.jsx'
 import pythonCert from '../assets/certificates/python.jpg'
 import mlCert from '../assets/certificates/ml.jpg'
+import primer from '../assets/certificates/primer.jpg'
+
 
 const certifications = [
   {
@@ -16,6 +18,12 @@ const certifications = [
     organization: 'Dhaksina Bharat Hindi Prachar Sabha',
     year: '2021',
     image: mlCert
+  },
+  {
+    title: 'Artificial Intelligence Primer Certification',
+    organization: 'Infosys Springboard',
+    year: '2026',
+    image: primer
   }
 ]
 

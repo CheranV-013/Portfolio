@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
+import CodingProfiles from './components/CodingProfiles.jsx'
 import Education from './components/Education.jsx'
 import Certifications from './components/Certifications.jsx'
 import Achievements from './components/Achievements.jsx'
@@ -31,6 +32,7 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
+        <CodingProfiles />
         <Education />
         <Certifications />
         <Achievements />

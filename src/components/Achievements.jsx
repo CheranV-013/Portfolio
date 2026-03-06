@@ -13,6 +13,8 @@ import jaipur1 from '../assets/achievements/jaipur1.jpg'
 import jaipur2 from '../assets/achievements/jaipur2.jpg'
 import jaipur3 from '../assets/achievements/jaipur3.jpg'    
 import jaipur4 from '../assets/achievements/jaipur4.jpg'
+import codevita1 from '../assets/achievements/codevita1.jpg'
+import codevita2 from '../assets/achievements/codevita2.jpg'
 
 const achievements = [
   {
@@ -58,6 +60,17 @@ const achievements = [
     technologies: ['React', 'Node.js', 'Socket.io'],
     role: 'Contributed to the development of the AI solution, including data preprocessing, model training, and integration into a user-friendly interface.',
     images: [jaipur1, jaipur2, jaipur3, jaipur4] 
+  },
+  {
+    title: 'Shortlisted for Round 2 of TCS Codevita',
+    shortDescription: 'Shortlisted for Round 2 of TCS Codevita, a prestigious coding competition.',
+    event: 'TCS Codevita 2026',
+    coverImage: codevita1,
+    description:
+      'Shortlisted for Round 2 of TCS Codevita, a prestigious coding competition that attracts participants from around the world. In this round, we were tasked with solving complex algorithmic problems within a specified time frame, showcasing our coding skills and problem-solving abilities.',
+    technologies: ['C++'],
+    role: 'Contributed to the development of the AI solution, including data preprocessing, model training, and integration into a user-friendly interface.',
+    images: [codevita1, codevita2]
   }
 ]
 
