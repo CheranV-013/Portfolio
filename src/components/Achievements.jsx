@@ -8,7 +8,11 @@ import techfusion4 from '../assets/achievements/techfusion4.jpg'
 import hackathon1 from '../assets/achievements/hackathon1.jpg'
 import reversecoding1 from '../assets/achievements/reversecoding1.jpg'
 import reversecoding2 from '../assets/achievements/reversecoding2.jpg'
-import reversecoding3 from '../assets/achievements/reversecoding3.jpg'    
+import reversecoding3 from '../assets/achievements/reversecoding3.jpg'
+import jaipur1 from '../assets/achievements/jaipur1.jpg'
+import jaipur2 from '../assets/achievements/jaipur2.jpg'
+import jaipur3 from '../assets/achievements/jaipur3.jpg'    
+import jaipur4 from '../assets/achievements/jaipur4.jpg'
 
 const achievements = [
   {
@@ -43,6 +47,17 @@ const achievements = [
     technologies: ['React', 'Node.js', 'Socket.io'],
     role: 'Led front-end development, integrated Socket.io live updates, and coordinated deployment on event day.',
     images: [techfusion1, techfusion2, techfusion3, techfusion4]
+  },
+  {
+    title: 'AESTR ALPHA - AI Summit 2026',
+    shortDescription: 'Participated in phase 2 of Jaipur - Cybrathon.',
+    event: 'Jaipur - Cybrathon 2026',
+    coverImage: jaipur1,
+    description:
+      'Participated in phase 2 of Jaipur - Cybrathon, where we developed an AI-powered solution to address a specific problem statement. We utilized machine learning algorithms and data analysis techniques to create an innovative solution that was evaluated by a panel of judges.',
+    technologies: ['React', 'Node.js', 'Socket.io'],
+    role: 'Contributed to the development of the AI solution, including data preprocessing, model training, and integration into a user-friendly interface.',
+    images: [jaipur1, jaipur2, jaipur3, jaipur4] 
   }
 ]
 
