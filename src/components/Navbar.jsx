@@ -18,7 +18,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
     <header className="sticky top-0 z-50 bg-sand-50/90 backdrop-blur border-b border-ink-100">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
         <a href="#home" className="font-display text-lg font-semibold text-ink-900">
-          AI/ML Portfolio
+          Cheran V | AI/ML Portfolio
         </a>
 
         <div className="hidden items-center gap-6 text-sm font-medium text-ink-600 md:flex">

@@ -11,9 +11,7 @@ const About = () => {
               Passionate AI/ML student focused on building data-driven products and delightful user experiences.
             </p>
             <p className="mt-6 text-base text-ink-600">
-              I am a second-year student specializing in Artificial Intelligence and Machine Learning. I enjoy solving
-              real-world problems with a blend of ML models, clean software architecture, and elegant front-end design.
-              My goal is to contribute to meaningful products that make technology more accessible and impactful.
+              Second-year student specializing in Artificial Intelligence and Machine Learning.
             </p>
           </div>
 
