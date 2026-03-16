@@ -4,26 +4,70 @@ import CertificateModal from './CertificateModal.jsx'
 import pythonCert from '../assets/certificates/python.jpg'
 import mlCert from '../assets/certificates/ml.jpg'
 import primer from '../assets/certificates/primer.jpg'
-
+import cisco1 from '../assets/certificates/cisco1.jpg'
+import cisco2 from '../assets/certificates/cisco2.jpg'
+import cisco3 from '../assets/certificates/cisco3.jpg'
+import cisco4 from '../assets/certificates/cisco4.jpg'
+import cisco5 from '../assets/certificates/cisco5.jpg'
+import cisco6 from '../assets/certificates/cisco6.jpg'
+import cisco from '../assets/certificates/cisco.jpg'
+import fullstack from '../assets/certificates/fullstack.jpg'
+import hindi from '../assets/certificates/hindi.jpg'
 
 const certifications = [
   {
-    title: 'Honours Diploma in Full Stack Development',
-    organization: 'Computer Software College',
-    year: '2025',
-    image: pythonCert
+    title: "Honours Diploma in Full Stack Development",
+    organization: "Computer Software College",
+    year: "2025",
+    cover: fullstack,   // title / card image
+    image: pythonCert,       // actual certificate
+    description:
+      "Comprehensive training in MERN stack, backend APIs, and modern web development."
   },
   {
-    title: 'B.A. in Hindi Language',
-    organization: 'Dhaksina Bharat Hindi Prachar Sabha',
-    year: '2021',
-    image: mlCert
+    title: "B.A. in Hindi Language",
+    organization: "Dhaksina Bharat Hindi Prachar Sabha",
+    year: "2021",
+    cover: hindi,
+    image: mlCert,
+    description:
+      "Certification demonstrating proficiency in Hindi language and literature."
   },
   {
-    title: 'Artificial Intelligence Primer Certification',
-    organization: 'Infosys Springboard',
-    year: '2026',
-    image: primer
+    title: "CISCO Certifications",
+    organization: "Infosys Springboard",
+    year: "2026",
+    image: cisco,
+    certificates: [
+      {
+        image: primer,
+        description: "Networking basics including protocols, devices, and internet architecture."
+      },
+      {
+        image: cisco1,
+        description: "Introduction to Cybersecurity and threat protection concepts."
+      },
+      {
+        image: cisco2,
+        description: "Network security fundamentals and secure communication principles."
+      },
+      {
+        image: cisco3,
+        description: "Packet Tracer simulations and practical networking configuration."
+      },
+      {
+        image: cisco4,
+        description: "IoT fundamentals and smart device networking concepts."
+      },
+      {
+        image: cisco5,
+        description: "Advanced networking concepts and troubleshooting."
+      },
+      {
+        image: cisco6,
+        description: "Cloud networking and virtualization technologies."
+      }
+    ]
   }
 ]
 
