@@ -55,7 +55,7 @@ const projects = [
     coverImage: tamper1,
     description:
       'This project detects device tampering using IoT sensors and AI-based anomaly detection. Sensor data such as motion and vibration is continuously monitored to track device activity. Isolation Forest and Autoencoder algorithms analyze the data and trigger alerts when abnormal behavior is detected.',
-    technologies: ['IoT Sensors', 'ESP32/Arduino', 'Python', 'Machine Learning (Anomaly Detection)', 'MQTT/HTTP', 'Cloud Dashboard','Vercel','Render'],
+    technologies: ['IoT Sensors', 'ESP8266', 'Python', 'Machine Learning (Anomaly Detection)', 'MQTT', 'Cloud Dashboard','Vercel','Render'],
     github: 'https://github.com/CheranV-013/tamper_detection',
     demo: 'https://tamper-detection.vercel.app/',
     images: [tamper1]
