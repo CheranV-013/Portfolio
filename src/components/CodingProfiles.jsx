@@ -24,7 +24,7 @@ const codingProfiles = [
     platform: 'Codeforces',
     username: 'kit2824bam013',
     rating: '1118',
-    problemsSolved: '180+',
+    problemsSolved: '50+',
     profile: 'https://codeforces.com/profile/kit2824bam013',
     logo: codeforcesLogo
   }
