@@ -8,7 +8,7 @@ const codingProfiles = [
     platform: 'LeetCode',
     username: 'kit2824bam013',
     rating: '1519',
-    problemsSolved: '250+',
+    problemsSolved: '300+',
     profile: 'https://leetcode.com/u/kit2824bam013/',
     logo: leetcodeLogo
   },
