@@ -1,4 +1,4 @@
-const skills = ['Java', 'Python', 'C++', 'React', 'Machine Learning']
+const skills = ['IoT', 'C++', 'React', 'Machine Learning']
 
 const About = () => {
   return (
